@@ -1,0 +1,22 @@
+public class j32_Excepcion_1 {
+
+    public static void main(String[] args) {
+        System.out.println("-- INICIO DEL PROGRAMA --");
+
+        String textoIngresado = "Carlos";
+
+        try {
+            System.out.println("Intentando convertir el texto a número...");
+
+            int numero = Integer.parseInt(textoIngresado);
+
+            System.out.println("El número es: " + numero);
+
+        } catch (NumberFormatException e) {
+            System.out.println("Ocurrió un error: No puedes convertir texto con letras a un número.");
+        }
+
+        System.out.println("=== FIN DEL PROGRAMA ===");
+        System.out.println("El sistema sobrevivió y sigue operando");
+    }
+}
