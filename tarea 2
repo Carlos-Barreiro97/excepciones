@@ -1,0 +1,32 @@
+public class j33_MultiplesExcepciones {
+
+    public static void main(String[] args) {
+        System.out.println("----MÚLTIPLES EXCEPCIONES ----\n");
+
+        System.out.println("---- EJEMPLO 1: ArithmeticException");
+        try {
+            System.out.println("\nIntentando dividir un número entre cero...");
+            int resultado = 100 / 0;
+            System.out.println("Resultado: " + resultado);
+
+        } catch (ArithmeticException e) {
+            System.out.println("No se puede dividir un número entre cero.\n");
+        }
+
+        System.out.println("---- EJEMPLO 2: NullPointerException ");
+        try {
+            System.out.println("\nIntentando usar un texto que no ha sido inicializado...");
+            String texto = null;
+
+            int longitud = texto.length();
+            System.out.println("La longitud es: " + longitud);
+
+        } catch (NullPointerException e) {
+            System.out.println("¡Error de puntero nulo!");
+            System.out.println(" Intentaste usar un objeto que está vacío o no existe.");
+        }
+
+        System.out.println("\n=== FIN DEL PROGRAMA ===");
+        System.out.println("Gracias a los bloques try-catch, el programa manejó ambos errores y llegó al final con éxito.");
+    }
+}
